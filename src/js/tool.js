@@ -26,6 +26,8 @@ $('#input1').click(function() {
 	input1.value = "请输入你要搜索的关键字"
 })
 
+
+
 $('#input2').click(function() {
 	input2.value = null
 }).blur(function() {
@@ -223,8 +225,6 @@ var fn = () => {
 };
 
 
-//var lii = Array.from(document.querySelectorAll("#lb1 li"))
-
 lb1.onmouseenter = function () {
 	clearTimeout(timer2)
 	clearTimeout(timer3)
@@ -366,3 +366,167 @@ for( let i = 0 ; i < ctbtns.length ; i++ ){
 		lunbo5();
 	}
 }
+
+
+var cmlis = $('#conner_lm_ul');
+var cmbtns = $('#conner_lm_ol').children();
+var cmindex = 0;
+var timer11 = setInterval(lunbo6,3000)
+function lunbo6(){
+	cmindex++;
+	if (cmindex == 3) {
+		cmindex = 1;
+		cmlis.css("left","0")
+	}
+	for (var i = 0;i<cmbtns.length;i++) {
+		
+		cmbtns[i].style.background = ""
+	}
+	cmbtns[cmindex == 2?0:cmindex].style.background = "#ff6600"
+	startMove(conner_lm_ul,{"left":-480*cmindex})
+}
+cmlis.mouseenter(function(){
+	clearInterval(timer11)
+}).mouseleave(function(){
+	timer11 = setInterval(lunbo6,3000)
+})
+for( let i = 0 ; i < cmbtns.length ; i++ ){
+	cmbtns[i].onmouseover = function(){
+		cmindex = i-1;
+		lunbo6();
+	}
+}
+
+var cm2lis = $('#conner_lm2_ul');
+var cm2btns = $('#conner_lm2_ol').children();
+var cm2index = 0;
+var timer12 = setInterval(lunbo7,3000)
+function lunbo7(){
+	cm2index++;
+	if (cm2index == 3) {
+		cm2index = 1;
+		cm2lis.css("left","0")
+	}
+	for (var i = 0;i<cm2btns.length;i++) {
+		
+		cm2btns[i].style.background = ""
+	}
+	cm2btns[cm2index == 2?0:cm2index].style.background = "#ff6600"
+	startMove(conner_lm2_ul,{"left":-480*cm2index})
+}
+cm2lis.mouseenter(function(){
+	clearInterval(timer12)
+}).mouseleave(function(){
+	timer12 = setInterval(lunbo7,3000)
+})
+for( let i = 0 ; i < cm2btns.length ; i++ ){
+	cm2btns[i].onmouseover = function(){
+		cm2index = i-1;
+		lunbo7();
+	}
+}
+
+var cm3lis = $('#conner_lm3_ul');
+var cm3btns = $('#conner_lm3_ol').children();
+var cm3index = 0;
+var timer13 = setInterval(lunbo8,3000)
+function lunbo8(){
+	cm3index++;
+	if (cm3index == 3) {
+		cm3index = 1;
+		cm3lis.css("left","0")
+	}
+	for (var i = 0;i<cm3btns.length;i++) {
+		
+		cm3btns[i].style.background = ""
+	}
+	cm3btns[cm3index == 2?0:cm3index].style.background = "#ff6600"
+	startMove(conner_lm3_ul,{"left":-480*cm3index})
+}
+cm3lis.mouseenter(function(){
+	clearInterval(timer13)
+}).mouseleave(function(){
+	timer13 = setInterval(lunbo8,3000)
+})
+for( let i = 0 ; i < cm3btns.length ; i++ ){
+cm3btns[i].onmouseover = function(){
+	cm3index = i-1;
+	lunbo8();
+	}
+}
+
+var cm4lis = $('#conner_lm4_ul');
+var cm4btns = $('#conner_lm4_ol').children();
+var cm4index = 0;
+var timer14 = setInterval(lunbo9,3000)
+function lunbo9(){
+	cm4index++;
+	if (cm4index == 3) {
+		cm4index = 1;
+		cm4lis.css("left","0")
+	}
+	for (var i = 0;i<cm4btns.length;i++) {
+		
+		cm4btns[i].style.background = ""
+	}
+	cm4btns[cm4index == 2?0:cm4index].style.background = "#ff6600"
+	startMove(conner_lm4_ul,{"left":-480*cm4index})
+}
+cm4lis.mouseenter(function(){
+	clearInterval(timer14)
+}).mouseleave(function(){
+	timer14 = setInterval(lunbo9,3000)
+})
+for( let i = 0 ; i < cm4btns.length ; i++ ){
+	cm4btns[i].onmouseover = function(){
+		cm4index = i-1;
+		lunbo9();
+	}
+}
+
+
+$('#conner_r_t1').mouseenter(function(){
+	$('#conner_r_t1>ul').css("display","block")
+	$('#conner_r_t2>ul').css("display","none")
+})
+$('#conner_r_t2').mouseenter(function(){
+	$(this).css("background","#FFFFFF")
+	$('#conner_r_t2>ul').css("display","block")
+	$('#conner_r_t1>ul').css("display","none")
+})
+$('#conner_r_m1').mouseenter(function(){
+	$('#conner_r_m1>ul').css("display","block")
+	$('#conner_r_m2>ul').css("display","none")
+})
+$('#conner_r_m2').mouseenter(function(){
+	$(this).css("background","#FFFFFF")
+	$('#conner_r_m2>ul').css("display","block")
+	$('#conner_r_m1>ul').css("display","none")
+})
+$('#conner_r_m3').mouseenter(function(){
+	$('#conner_r_m3>ul').css("display","block")
+	$('#conner_r_m4>ul').css("display","none")
+})
+$('#conner_r_m4').mouseenter(function(){
+	$(this).css("background","#FFFFFF")
+	$('#conner_r_m4>ul').css("display","block")
+	$('#conner_r_m3>ul').css("display","none")
+})
+$('#conner_r_m5').mouseenter(function(){
+	$('#conner_r_m5>ul').css("display","block")
+	$('#conner_r_m6>ul').css("display","none")
+})
+$('#conner_r_m6').mouseenter(function(){
+	$(this).css("background","#FFFFFF")
+	$('#conner_r_m6>ul').css("display","block")
+	$('#conner_r_m5>ul').css("display","none")
+})
+$('#conner_r_b1').mouseenter(function(){
+	$('#conner_r_b1>ul').css("display","block")
+	$('#conner_r_b2>ul').css("display","none")
+})
+$('#conner_r_b2').mouseenter(function(){
+	$(this).css("background","#FFFFFF")
+	$('#conner_r_b2>ul').css("display","block")
+	$('#conner_r_b1>ul').css("display","none")
+})
