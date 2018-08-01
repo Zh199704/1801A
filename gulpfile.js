@@ -30,7 +30,7 @@ gulp.task("task1",function(){
     //拷贝后缀为js的文件
     //gulp.src("src/js/*.js").pipe(gulp.dest("dist/js"));
     //拷问属性的所有文件
-    gulp.src("src/html/*.*").pipe(gulp.dest("dist/html"));
+    gulp.src("src/php/*.*").pipe(gulp.dest("dist/php"));
 })
 
 
